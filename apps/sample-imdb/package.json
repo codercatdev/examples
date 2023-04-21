@@ -27,7 +27,7 @@
     "@types/react-dom": "18.0.11",
     "@xata.io/cli": "0.11.19",
     "autoprefixer": "^10.4.12",
-    "concurrently": "^7.5.0",
+    "concurrently": "^8.0.0",
     "esbuild": "^0.17.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
