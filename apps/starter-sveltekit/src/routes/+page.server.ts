@@ -1,5 +1,5 @@
 import type { Actions } from './$types';
-import { invalid } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import { xata } from '$lib/xata';
 
 export async function load() {
@@ -12,9 +12,8 @@ export const actions: Actions = {
 		const data = await request.formData();
 		const id = data.get('id');
 		if (typeof id !== 'string' || id === '') {
-			return invalid(422, {
-				id,
-				missing: true
+			throw error(422, {
+				message: 'missing'
 			});
 		}
 		await xata.db.sveltekit_with_xata_example.delete(id);
